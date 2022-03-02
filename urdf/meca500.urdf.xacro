@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://wiki.ros.org/xacro" name="$(arg name)">
+   <!-- robot name parameter -->
+   <xacro:arg name="name" default="meca500"/>
+   <!-- import main macro -->
+   <xacro:include filename="$(find meca_description)/urdf/meca500_macro.xacro"/>
+
+   <!-- parameters -->
+   <xacro:arg name="prefix" default="" />
+
+   <!-- arm -->
+   <xacro:meca500
+     prefix="$(arg prefix)"/>
+</robot>
